@@ -7,7 +7,7 @@
   line-height: 45px; }
 .top-bar .name a {
   font-weight: bold;
-  color: white;
+  color: yellow;
   padding: 0 15px; }
 
 // use mixins to create semantic classes
@@ -22,7 +22,7 @@
   }
 main {
   @include large12-columns;
-  background-color: #eee;
+  background-color: #abc;
   }
 section {
   @extend .row;
