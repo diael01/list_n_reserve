@@ -1,43 +1,88 @@
 // import the CSS framework
 @import "foundation";
 
+
 // override for the 'Home' navigation link
-.top-bar .name {
-  font-size: 0.8125em;
-  line-height: 45px; }
-.top-bar .name a {
-  font-weight: bold;
+/*.top-bar .name {
+//font-size: 0.8125em;
+  font-style:italic;
+  font-size: 1.250em;
+  line-height: 45px; 
+  background-color: lightseagreen;
   color: yellow;
-  padding: 0 15px; }
+  }*/
+
+.top-bar .name a {
+ //font-style:italic;
+ //font-size:1.00em;
+  //font-size: 0.950em;
+  //font-weight: bold;
+  color: yellow;
+  padding: 0 15px; 
+  line-height: 45px; 
+  background-color: lightseagreen;
+  font:italic 15px/45px Georgia, serif;
+  }
+
+.top-bar-section li a:not(.button) {
+color: yellow;
+//font-style:italic;
+//font-size:1.00em;
+padding: 0 15px;
+line-height: 45px;
+background: blue;
+font:italic 15px/45px Georgia, serif;
+}
 
 // use mixins to create semantic classes
 @mixin large12-columns {
   @extend .large-12;
   @extend .columns;
+  
   }
 @mixin large6-columns-centered {
   @extend .large-6;
   @extend .columns;
   @extend .text-center;
+  
   }
 main {
   @include large12-columns;
-  background-color: #abc;
+  background-color: lightyellow;
+  
   }
 section {
   @extend .row;
   margin-top: 20px;
+  
   }
 .column {
   @include large6-columns-centered;
+  background-color: lightyellow;
   }
 .form {
   @include grid-column(6);
+  
   }
 .form-centered {
   @include large6-columns-centered;
+  
   }
 .submit {
   @extend .button;
   @extend .radius;
   }
+
+
+$body-font-family: "Avenir Roman", "Helvetica", Helvetica, Arial, sans-serif;
+
+$body-bg: #fff !default;
+$body-font-color: #323B46 !default;
+$heading-font-color: #0094BA !default;
+
+$primary-color: #C6CD00 !default;
+$secondary-color: #252F37 !default;
+$alert-color: #c60f13 !default;
+$success-color: #5da423 !default;
+
+$global-radius: 3px !default;

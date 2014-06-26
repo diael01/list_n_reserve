@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SportsReservations::Application.config.secret_key_base = '069ce504cc2f45a299a1df332af545441e29f5ab856737e00b6c90af5e7a0751259ce2f078a89f2a80959076d57aafcff64ae0e2f682edff22cd3e2157df73b1'
+SportsReservations::Application.config.secret_key_base = 'f49b13ea5877c95724178c62e0dcc7ee2de188e2a99dbdb9ed57eb5c015d5dd0ea38c7ddd0fe5b9d58f5f190ed9109f9b520af324c1a1d22609f6122233d4404'

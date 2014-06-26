@@ -1,0 +1,53 @@
+<%= simple_form_for :search,  url: tennis_facilities_path , :method => :get do |f| %>
+    <%= f.input :zipcode, :autofocus => true %>
+    <%= f.submit "Search" %>
+<% end %>
+<h1>Listing Tennis Facilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>City</th>
+      <th>Courts</th>
+      <th>Lights</th>
+      <th>Court Type</th>
+      <th>Comments</th>
+      <th>Phone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tennis_facilities.each do |tennis_facility| %>
+      <tr>
+        <td><%= tennis_facility.name %></td>
+        <td><%= tennis_facility.address %></td>
+        <td><%= tennis_facility.zipcode %></td>
+        <td><%= tennis_facility.city %></td>
+        <td><%= tennis_facility.courts %></td>
+        <td><%= tennis_facility.lights %></td>
+        <td><%= tennis_facility.courtstypes %></td>
+        <td><%= tennis_facility.comments %></td>
+        <td><%= tennis_facility.phone %></td>
+        
+        <td><%= link_to 'Reserve', reservations_path(:facilityId => tennis_facility.id, :courts => tennis_facility.courts) %></td>
+        
+        <td><%= link_to 'Show Map', tennis_facility %></td>
+        <td><%= link_to 'Pricing', prices_path(:facilityId => tennis_facility.id) %></td>
+        <td><%= link_to 'Edit', edit_tennis_facility_path(tennis_facility) %></td>
+        <!--<td><%= link_to 'Destroy', tennis_facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tennis Facility', new_tennis_facility_path %><br/>
+
+

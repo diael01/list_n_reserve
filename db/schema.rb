@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117033428) do
+ActiveRecord::Schema.define(version: 20140316023125) do
+
+  create_table "prices", force: true do |t|
+    t.string   "reservationType"
+    t.decimal  "reservationPrice",   precision: 10, scale: 0
+    t.text     "pricingDescription"
+    t.integer  "facilityId"
+    t.integer  "players"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.integer  "itemId"
+    t.integer  "priceId"
+    t.integer  "userId"
+    t.integer  "statusId"
+    t.string   "status"
+    t.string   "user"
+    t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "starttime"
+    t.integer  "endtime"
+    t.integer  "facilityId"
+    t.integer  "players"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -23,6 +49,23 @@ ActiveRecord::Schema.define(version: 20131117033428) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "tennis_facilities", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.integer  "zipcode"
+    t.string   "city"
+    t.integer  "courts"
+    t.string   "lights"
+    t.string   "courtstypes"
+    t.string   "comments"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "map"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

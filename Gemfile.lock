@@ -33,6 +33,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     builder (3.1.4)
     cancan (1.6.10)
     capybara (2.1.0)
@@ -41,6 +43,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cells (3.9.1)
+      actionpack (>= 3.0)
+      railties (>= 3.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chunky_png (1.2.9)
@@ -77,6 +82,7 @@ GEM
       rails (>= 3, < 5)
     formatador (0.2.4)
     fssm (0.2.10)
+    geocoder (1.1.9)
     guard (2.2.3)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -195,14 +201,17 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootstrap-sass
   cancan
   capybara
+  cells
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0.alpha.0)
   devise
   devise_invitable
   fabrication
   figaro
+  geocoder
   guard-bundler
   guard-rails
   jbuilder (~> 1.2)

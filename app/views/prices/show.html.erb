@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reservation Type:</strong>
+  <%= @price.reservationType %>
+</p>
+
+<p>
+  <strong>Reservation Price:</strong>
+  <%= @price.reservationPrice %>
+</p>
+
+<p>
+  <strong>Pricing Description:</strong>
+  <%= @price.pricingDescription %>
+</p>
+
+<p>
+  <strong>Facility Id:</strong>
+  <%= @price.facilityId %>
+</p>
+
+<p>
+  <strong>Players:</strong>
+  <%= @price.players %>
+</p>
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

@@ -1,0 +1,16 @@
+<%= simple_form_for(@price) do |f| %>
+  <%= f.error_notification %>
+<!--<%= @price.facilityId.inspect  %>-->
+
+  <div class="form-inputs">
+    <%= f.input :reservationType %>
+    <%= f.input :reservationPrice %>
+    <%= f.input :pricingDescription %>
+    <%= f.input :facilityId %>
+    <%= f.input :players %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

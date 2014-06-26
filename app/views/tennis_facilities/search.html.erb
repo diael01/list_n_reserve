@@ -1,0 +1,14 @@
+
+<h1>Search Tennis Facilities</h1>
+<%= simple_form_for :search,  url: tennis_facilities_path , :method => :get do |f| %>
+    <%= f.input :zipcode, :autofocus => true %>
+    <%= f.submit "Search" %>
+    <!--<%=f.input :zipcode, :autofocus => true %>
+    <<%= f.input :zipcode, :autofocus => true %>
+    <%= f.input :city, :autofocus => true %>
+    <%= f.input :name, :autofocus => true %>
+    <%= f.input :id, :autofocus => true %>-->
+<% end %>
+
+
+<%= link_to 'Back', tennis_facilities_path %>

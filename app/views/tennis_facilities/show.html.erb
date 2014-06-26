@@ -1,0 +1,66 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tennis_facility.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @tennis_facility.address %>
+</p>
+
+<!--<p>
+  <strong>Zipcode:</strong>
+  <%= @tennis_facility.zipcode %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @tennis_facility.city %>
+</p>
+
+<p>
+  <strong>Courts:</strong>
+  <%= @tennis_facility.courts %>
+</p>
+
+<p>
+  <strong>Lighted:</strong>
+  <%= @tennis_facility.lights %>
+</p>
+
+<p>
+  <strong>Courtstypes:</strong>
+  <%= @tennis_facility.courtstypes %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @tennis_facility.comments %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @tennis_facility.phone %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @tennis_facility.latitude %>
+</p>-->
+
+<td>
+<%= image_tag src=
+  "http://maps.googleapis.com/maps/api/staticmap?center=#{@tennis_facility.latitude},#{@tennis_facility.longitude}&zoom=12&size=400x400&maptype=roadmap&markers=color:red%7Ccolor:red%7Clabel:C%7C
+  #{@tennis_facility.latitude},#{@tennis_facility.longitude}
+  &sensor=false" %>
+</td>
+
+
+
+
+
+<%= link_to 'Edit', edit_tennis_facility_path(@tennis_facility) %> |
+<%= link_to 'Back', tennis_facilities_path %>
